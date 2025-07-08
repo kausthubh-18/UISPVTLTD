@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products – United Integrated Services Pvt Ltd</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">UIS</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+            <a href="blogs.html">Blogs</a>
+      <a href="login.html" class="login-btn">Login</a>
+
+    </nav>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <h1>Our Products</h1>
+
+    <!-- Search + Filter -->
+    <div class="filter-bar">
+      <input type="text" placeholder="Search products..." id="searchInput" />
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="ai">AI Systems</option>
+        <option value="iot">IoT Devices</option>
+        <option value="analytics">Data Analytics</option>
+      </select>
+    </div>
+
+    <!-- Product Cards -->
+    <div class="product-grid">
+      <div class="product-card" data-category="ai">
+        <img src="static/product1.jpg" alt="AI System">
+        <h3>Smart AI Controller</h3>
+        <p>Advanced processing for embedded AI systems.</p>
+        <button>Add to Inquiry</button>
+      </div>
+
+      <div class="product-card" data-category="iot">
+        <img src="static/product2.jpg" alt="IoT Module">
+        <h3>IoT Sensor Module</h3>
+        <p>Real-time sensing and cloud integration.</p>
+        <button>Add to Inquiry</button>
+      </div>
+
+      <div class="product-card" data-category="analytics">
+        <img src="static/product3.jpg" alt="Analytics Tool">
+        <h3>DataViz Suite</h3>
+        <p>AI-powered data visualization dashboard.</p>
+        <button>Add to Inquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 UNITED INTEGRATED SERVICES PVT LTD</p>
+    <div class="socials">
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+
+  <!-- Script for Filter -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const cards = document.querySelectorAll('.product-card');
+
+    function filterProducts() {
+      const search = searchInput.value.toLowerCase();
+      const category = categoryFilter.value;
+
+      cards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        const matchCategory = category === 'all' || card.dataset.category === category;
+        const matchSearch = name.includes(search);
+        card.style.display = matchCategory && matchSearch ? 'block' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filterProducts);
+    categoryFilter.addEventListener('change', filterProducts);
+  </script>
+
+</body>
+</html>

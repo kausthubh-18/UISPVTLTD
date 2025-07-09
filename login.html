@@ -9,16 +9,19 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="navbar">
+  <!-- Header with Hamburger -->
+  <header class="navbar" id="navbar">
     <div class="logo">UIS</div>
-    <nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="products.html">Products</a>
       <a href="contact.html">Contact</a>
+      <a href="blogs.html">Blogs</a>
       <a href="login.html" class="login-btn">Login</a>
-    </nav>
+    </div>
   </header>
 
   <!-- Login/Register Section -->
@@ -54,10 +57,15 @@
     </div>
   </footer>
 
+  <!-- Script: Toggle Login/Register -->
   <script>
     function toggleForm() {
       document.querySelector('.login-box').classList.toggle('hidden');
       document.querySelector('.register-box').classList.toggle('hidden');
+    }
+
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('expanded');
     }
   </script>
 

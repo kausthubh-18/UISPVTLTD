@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>United Integrated Services Pvt Ltd</title>
   <link rel="stylesheet" href="static/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- Header with Hamburger -->
+  <!-- Header -->
   <header class="navbar" id="navbar">
     <div class="logo">UIS</div>
-
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -25,7 +22,7 @@
     </div>
   </header>
 
-  <!-- Hero Section with Background Video -->
+  <!-- Hero Section -->
   <section class="video-hero">
     <video autoplay muted loop playsinline class="bg-video">
       <source src="static/videos/tech-background.mp4" type="video/mp4">
@@ -45,9 +42,9 @@
   <section class="clients">
     <h2>Our Partners</h2>
     <div class="client-logos">
-      <img src="client1.png" alt="Client 1" />
-      <img src="client2.png" alt="Client 2" />
-      <img src="client3.png" alt="Client 3" />
+      <img src="static/images/client1.jpg" alt="Client 1" />
+      <img src="static/images/client2.jpg" alt="Client 2" />
+      <img src="static/images/client3.jpg" alt="Client 3" />
     </div>
   </section>
 
@@ -55,14 +52,38 @@
   <section class="technologies">
     <h2>Technologies We Work On</h2>
     <div class="tech-grid">
-      <div class="tech-item">IoT</div>
-      <div class="tech-item">VLSI</div>
-      <div class="tech-item">Embedded Systems</div>
-      <div class="tech-item">Machine Learning</div>
-      <div class="tech-item">Artificial Intelligence</div>
-      <div class="tech-item">Robotics</div>
-      <div class="tech-item">Full Stack Web Development</div>
-      <div class="tech-item">UI/UX Design</div>
+      <div class="tech-item">
+        <img src="static/images/iot.jpg" alt="IoT">
+        <span>IoT</span>
+      </div>
+      <div class="tech-item">
+        <img src="static/images/vlsi.jpg" alt="VLSI">
+        <span>VLSI</span>
+      </div>
+      <div class="tech-item">
+        <img src="static/images/embedded.jpg" alt="Embedded Systems">
+        <span>Embedded Systems</span>
+      </div>
+      <div class="tech-item">
+        <img src="static/images/ml.jpg" alt="Machine Learning">
+        <span>Machine Learning</span>
+      </div>
+      <div class="tech-item">
+        <img src="static/images/ai.jpg" alt="Artificial Intelligence">
+        <span>Artificial Intelligence</span>
+      </div>
+      <div class="tech-item">
+        <img src="static/images/robotics.jpg" alt="Robotics">
+        <span>Robotics</span>
+      </div>
+      <div class="tech-item">
+        <img src="static/images/web.jpg" alt="Full Stack Web Development">
+        <span>Full Stack Web Dev</span>
+      </div>
+      <div class="tech-item">
+        <img src="static/images/uiux.jpg" alt="UI/UX Design">
+        <span>UI/UX Design</span>
+      </div>
     </div>
   </section>
 
@@ -70,16 +91,17 @@
   <footer>
     <p>© 2025 UNITED INTEGRATED SERVICES PVT LTD</p>
     <div class="socials">
-      <i class="fab fa-linkedin"></i>
-      <i class="fab fa-instagram"></i>
+      <img src="static/images/linkedin.jpg" alt="LinkedIn" width="24">
+      <img src="static/images/instagram.jpg" alt="Instagram" width="24">
     </div>
   </footer>
 
-  <!-- Hamburger Toggle Script -->
+  <!-- Hamburger Toggle -->
   <script>
     function toggleMenu() {
       document.getElementById('navbar').classList.toggle('expanded');
     }
   </script>
+
 </body>
 </html>

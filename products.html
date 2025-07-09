@@ -9,18 +9,19 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="navbar">
+  <!-- Header with Hamburger -->
+  <header class="navbar" id="navbar">
     <div class="logo">UIS</div>
-    <nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="products.html">Products</a>
       <a href="contact.html">Contact</a>
-            <a href="blogs.html">Blogs</a>
+      <a href="blogs.html">Blogs</a>
       <a href="login.html" class="login-btn">Login</a>
-
-    </nav>
+    </div>
   </header>
 
   <!-- Products Section -->
@@ -92,6 +93,13 @@
 
     searchInput.addEventListener('input', filterProducts);
     categoryFilter.addEventListener('change', filterProducts);
+  </script>
+
+  <!-- Script for Hamburger Toggle -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('expanded');
+    }
   </script>
 
 </body>

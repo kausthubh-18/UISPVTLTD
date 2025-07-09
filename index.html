@@ -9,34 +9,37 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="navbar">
+  <!-- Header with Hamburger -->
+  <header class="navbar" id="navbar">
     <div class="logo">UIS</div>
-    <nav>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="products.html">Products</a>
       <a href="contact.html">Contact</a>
       <a href="blogs.html">Blogs</a>
       <a href="login.html" class="login-btn">Login</a>
-    </nav>
+    </div>
   </header>
 
   <!-- Hero Section with Background Video -->
   <section class="video-hero">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="static/videos/tech-background.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="hero-content">
-    <h1>Welcome to United Integrated Services Pvt Ltd</h1>
-    <p>Empowering Innovation in Smart Systems & AI</p>
-    <div class="hero-buttons">
-      <a href="products.html"><button>Explore Products</button></a>
-      <a href="contact.html"><button class="outline">Contact Us</button></a>
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="static/videos/tech-background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Welcome to United Integrated Services Pvt Ltd</h1>
+      <p>Empowering Innovation in Smart Systems & AI</p>
+      <div class="hero-buttons">
+        <a href="products.html"><button>Explore Products</button></a>
+        <a href="contact.html"><button class="outline">Contact Us</button></a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Clients -->
   <section class="clients">
@@ -72,5 +75,11 @@
     </div>
   </footer>
 
+  <!-- Hamburger Toggle Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('expanded');
+    }
+  </script>
 </body>
 </html>
